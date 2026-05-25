@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "gj2XfkRm_0m4S96PoLGr6"
+uri = "file://artifacts/mockup-sandbox/public/images/hero-banner.png"
+type = "image"
+title = "Hero banner background"
+
+[[generated]]
+id = "p1yMjTmEQusBRzOn_XU9I"
+uri = "file://artifacts/mockup-sandbox/public/images/vanguard.png"
+type = "image"
+title = "Vanguard portrait"
+
+[[generated]]
+id = "ZsE3KSetctWPBAIRuBFPn"
+uri = "file://artifacts/mockup-sandbox/public/images/specter.png"
+type = "image"
+title = "Specter portrait"
+
+[[generated]]
+id = "BwDJUNr-JHZ7f8gyx46cv"
+uri = "file://artifacts/mockup-sandbox/public/images/aegis.png"
+type = "image"
+title = "Aegis portrait"
+
+[[generated]]
+id = "StL5oQmtAXCHK7l6PSKSR"
+uri = "file://artifacts/mockup-sandbox/public/images/phantom.png"
+type = "image"
+title = "Phantom portrait"
