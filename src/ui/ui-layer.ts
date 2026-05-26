@@ -19,7 +19,7 @@
  *         swallows input beneath — don't reimplement dimming/centering.
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 
 /**
  * UI Element interface - all UI components implement this

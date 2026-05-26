@@ -1,4 +1,4 @@
-import { MakkoEngine } from "@makko/engine";
+import { MakkoEngine } from "../engine";
 import { BaseScene } from "../scene/base-scene";
 import { MatchScene } from "./match-scene";
 
@@ -91,7 +91,7 @@ export class TacticalOverlay extends BaseScene {
         }
 
         const size = 20;
-        display.drawRect(flag.position.x - size / 2, flag.position.y - size / 2, size, size, {
+        display.drawRect(flag.x - size / 2, flag.y - size / 2, size, size, {
             fill: flagColor,
             stroke: "#ffffff",
             lineWidth: 2

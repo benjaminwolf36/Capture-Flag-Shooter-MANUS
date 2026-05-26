@@ -5,7 +5,7 @@
  * All use screen-space coordinates and the UI theme.
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 import { type UIElement, UI_THEME } from './ui-layer';
 
 // ============================================================================

@@ -1,4 +1,4 @@
-import { MakkoEngine } from "@makko/engine";
+import { MakkoEngine } from "../engine";
 import type { MatchScene } from "../scenes/match-scene";
 import type { InputHandler } from "../systems/input-handler";
 import type { ProjectileConfig } from "../projectile/projectile-types";
@@ -89,7 +89,7 @@ export class Hero {
             height: 4,
             damage: this.getBaseDamage(),
             lifetime: 2,
-            owner: this.isPlayer ? "player" : "enemy",
+            owner: this.team === 'blue' ? 'player' : 'enemy',
             color: this.getBulletColor()
         };
     }

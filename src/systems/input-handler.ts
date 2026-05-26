@@ -1,4 +1,4 @@
-import { MakkoEngine } from "@makko/engine";
+import { MakkoEngine } from "../engine";
 
 export class InputHandler {
     public isPaused: boolean = false;

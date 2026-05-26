@@ -13,10 +13,11 @@
  *   pool.renderAll();
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 import { Pool } from '../pool/pool';
 import { Projectile } from './projectile';
 import type { ProjectileConfig, ProjectileOwner, HitBox, HitResult } from './projectile-types';
+import type { MatchScene } from '../scenes/match-scene';
 
 /**
  * ProjectilePool - manages all active projectiles
@@ -42,6 +43,46 @@ export class ProjectilePool {
     const proj = this.pool.get();
     proj.spawn(x, y, config);
     return proj;
+  }
+
+  /**
+   * Scene-aware update: wall collision + hero hit detection
+   */
+  update(dt: number, scene: MatchScene): void {
+    const walls = scene.mapArena.walls;
+    this.updateAll(dt, (x, y) => {
+      for (const w of walls) {
+        if (x >= w.x && x <= w.x + w.width && y >= w.y && y <= w.y + w.height) return true;
+      }
+      return false;
+    });
+
+    const playerTeam = scene.playerHero.team;
+    const allHeroes = [scene.playerHero, ...scene.allies, ...scene.enemies];
+
+    this.pool.forEach((proj) => {
+      if (!proj.active) return;
+      const pb = proj.getBounds();
+      for (const hero of allHeroes) {
+        if (hero.dead || hero.invulnerable > 0) continue;
+        const shouldHit =
+          (proj.owner === 'player' && hero.team !== playerTeam) ||
+          (proj.owner === 'enemy' && hero.team === playerTeam);
+        if (!shouldHit) continue;
+        const hb = hero.getHitbox();
+        if (pb.x < hb.x + hb.width && pb.x + pb.width > hb.x &&
+            pb.y < hb.y + hb.height && pb.y + pb.height > hb.y) {
+          hero.takeDamage(proj.damage, scene);
+          proj.kill();
+          break;
+        }
+      }
+    });
+  }
+
+  /** Scene-aware render */
+  render(_scene: MatchScene): void {
+    this.renderAll();
   }
 
   /**
