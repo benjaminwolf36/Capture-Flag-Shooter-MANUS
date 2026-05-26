@@ -9,7 +9,7 @@
  * - Divider: horizontal separator line with optional gradient
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 import { type UIElement, UI_THEME } from './ui-layer';
 import { WrappedText } from './ui-layout';
 

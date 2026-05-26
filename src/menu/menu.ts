@@ -13,7 +13,7 @@
  * glyph, and spacing instead of editing this file.
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 
 /**
  * A single menu item with label and action.

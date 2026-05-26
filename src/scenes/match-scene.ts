@@ -1,4 +1,4 @@
-import { MakkoEngine } from "@makko/engine";
+import { MakkoEngine } from "../engine";
 import { BaseScene } from "../scene/base-scene";
 import { Game } from "../game/game";
 import { MapArena } from "../entities/map-arena";

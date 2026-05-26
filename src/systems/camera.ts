@@ -1,4 +1,4 @@
-import { MakkoEngine } from "@makko/engine";
+import { MakkoEngine } from "../engine";
 import type { MapArena } from "../entities/map-arena";
 
 export class Camera {

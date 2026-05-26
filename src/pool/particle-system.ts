@@ -10,7 +10,7 @@
  *   // In game loop: particles.update(dt); particles.render(display);
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 
 /**
  * Particle interface

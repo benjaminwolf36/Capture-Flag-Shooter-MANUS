@@ -14,7 +14,7 @@
  *   - All scene wiring belongs in `Game` (./game/game); this file stays a
  *     thin boot shim — resist adding gameplay logic here.
  */
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from './engine';
 import { Game } from './game/game';
 
 async function main() {
@@ -36,6 +36,7 @@ async function main() {
 
   // Initialize and start game
   const game = new Game();
+  MakkoEngine.instance = game;
   await game.init();
   game.start();
 }

@@ -27,7 +27,7 @@
  *   this.addSystem(new PlayerSystem());
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 import { BaseScene } from '../scene/base-scene';
 import type { Game } from '../game/game';
 

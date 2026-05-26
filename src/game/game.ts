@@ -18,7 +18,7 @@
  * this.pushScene('pause') to overlay, this.popScene() to return.
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 import { SceneManager } from '../scene/scene-manager';
 import { StartScene } from '../scenes/start-scene';
 import { GameScene } from '../scenes/game-scene';

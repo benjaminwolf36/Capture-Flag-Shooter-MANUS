@@ -1,4 +1,4 @@
-import { MakkoEngine } from "@makko/engine";
+import { MakkoEngine } from "../engine";
 import type { MatchScene } from "../scenes/match-scene";
 
 export interface Wall {

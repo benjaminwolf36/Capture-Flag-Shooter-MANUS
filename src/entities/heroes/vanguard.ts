@@ -1,4 +1,4 @@
-import { MakkoEngine } from "@makko/engine";
+import { MakkoEngine } from "../../engine";
 import { Hero } from "../hero";
 import type { MatchScene } from "../../scenes/match-scene";
 

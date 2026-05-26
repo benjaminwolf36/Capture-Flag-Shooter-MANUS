@@ -9,7 +9,7 @@
  * - VStack: vertical stack layout with gap/padding, propagates width to children
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 import { type UIElement, UI_THEME } from './ui-layer';
 import { type TextSize, type TextColor, type TextAlign } from './ui-elements';
 

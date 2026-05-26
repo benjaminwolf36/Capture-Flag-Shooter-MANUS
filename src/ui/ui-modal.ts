@@ -14,7 +14,7 @@
  *   if (modal.isBackdropClicked()) { ... }
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 import { type UIElement, UI_THEME } from './ui-layer';
 import { isMeasurable, getNumericProp } from './ui-layout';
 

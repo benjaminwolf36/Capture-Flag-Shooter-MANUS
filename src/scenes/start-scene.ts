@@ -5,7 +5,7 @@
  * Displays game title and menu with "Start Game" option.
  */
 
-import { MakkoEngine } from '@makko/engine';
+import { MakkoEngine } from '../engine';
 import { BaseScene } from '../scene/base-scene';
 import { Menu } from '../menu/menu';
 import type { Game } from '../game/game';
